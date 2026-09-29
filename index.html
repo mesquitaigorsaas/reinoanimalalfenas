@@ -62,7 +62,7 @@
   --raio:22px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
+html{overflow-x:hidden;scroll-behavior:smooth;scroll-padding-top:84px}
 body{font-family:'Nunito',system-ui,sans-serif;color:var(--texto);background:var(--creme);line-height:1.6;overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
@@ -321,7 +321,8 @@ footer .redes svg{width:22px;height:22px;color:#fff}
 @keyframes chacoalha{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
 
 /* cachorrinho dourado correndo no rodapé */
-.corredor{position:absolute;top:-47px;left:0;width:96px;z-index:4;animation:corre 16s linear infinite;pointer-events:none}
+.pista{position:absolute;left:0;right:0;top:-50px;height:50px;overflow:hidden;pointer-events:none;z-index:4}
+.corredor{position:absolute;top:3px;left:0;width:96px;animation:corre 16s linear infinite;pointer-events:none}
 @keyframes corre{0%{transform:translateX(-140px)}65%,100%{transform:translateX(calc(100vw + 40px))}}
 .corredor .corpo-c{animation:galope .3s ease-in-out infinite alternate}
 @keyframes galope{from{transform:translateY(0)}to{transform:translateY(-4px)}}
@@ -381,7 +382,8 @@ footer .redes svg{width:22px;height:22px;color:#fff}
   .mapa,.mapa iframe{min-height:320px}
   .nota-geral{border-radius:22px}
   footer .container{flex-direction:column;align-items:flex-start}
-  .corredor{width:78px;top:-39px}
+  .pista{top:-42px;height:42px}
+  .corredor{width:78px;top:3px}
   .creditos{padding-right:70px}
   .selo-google{font-size:.8rem;white-space:nowrap;padding-right:12px}
   .selo-google .estrelas{font-size:.85rem}
@@ -690,7 +692,7 @@ footer .redes svg{width:22px;height:22px;color:#fff}
 </main>
 
 <footer>
-  <div class="corredor" aria-hidden="true"><svg viewBox="0 0 120 64"><g class="corpo-c">
+  <div class="pista" aria-hidden="true"><div class="corredor"><svg viewBox="0 0 120 64"><g class="corpo-c">
  <rect class="perna b" x="30" y="36" width="9" height="22" rx="4.5" fill="#E0B064" stroke="#1A2B1E" stroke-width="3"/><rect class="perna" x="74" y="36" width="9" height="22" rx="4.5" fill="#E0B064" stroke="#1A2B1E" stroke-width="3"/>
  <g class="rabo-c"><path d="M22 30 q-12 -6 -14 -18" fill="none" stroke="#1A2B1E" stroke-width="9" stroke-linecap="round"/><path d="M22 30 q-12 -6 -14 -18" fill="none" stroke="#F2CF8E" stroke-width="4" stroke-linecap="round"/></g>
  <ellipse cx="55" cy="34" rx="36" ry="15" fill="#F2CF8E" stroke="#1A2B1E" stroke-width="3.5"/>
@@ -701,7 +703,7 @@ footer .redes svg{width:22px;height:22px;color:#fff}
  <ellipse cx="108" cy="24" rx="8" ry="6" fill="#FFF4DC" stroke="#1A2B1E" stroke-width="2.5"/><circle cx="114" cy="22" r="3" fill="#1A2B1E"/>
  <circle cx="98" cy="16" r="2.6" fill="#1A2B1E"/>
  <path d="M104 30 q2 8 6 4" fill="#FF6F86" stroke="#1A2B1E" stroke-width="2"/>
-</g></svg></div>
+</g></svg></div></div>
   <div class="container">
     <a href="#inicio" class="marca">
       <img src="img/logo-sm.png" alt="" width="56" height="56">
